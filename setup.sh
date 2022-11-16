@@ -33,8 +33,12 @@
 
     echo " Choose from the below options for installation"
 
-
-
+    
+               select feature in dvwa-app splunk-server splunk-forwarder mariadb-server wordpress-nginx docker-dockercompose
+            do
+                echo "Selected character: $feature"
+                echo "Selected number: $REPLY"
+            done
 
 
 
