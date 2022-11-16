@@ -31,31 +31,31 @@
 
 #give options to install
 
-selctinstall(){
-    echo " Choose from the below options for installation"
-
+selectinstall(){
     
-               select feature in dvwa-app splunk-server splunk-forwarder mariadb-server wordpress-nginx docker-dockercompose
+                echo " Choose from the below options for installation"
+    
+               select feature in dvwa-app splunk-server splunk-forwarder mariadb-server wordpress-nginx docker-dockercompose "exit"
             do
-                echo "You Choose: $Reply $feature"
+                echo "You have opted : $Reply $feature"
                 #echo "Selected number: $REPLY"
                 
-                            if [[ $REPLY == "1" ]; then
-                            sudo apt upgrade -y
-                    elseif
-                            if [[ $REPLY == "2" ]; then
-                            sudo apt upgrade -y
-                    elseif
-                            if [[ $REPLY == "3" ]; then
-                            sudo apt upgrade -y
-                    elseif
-                            if [[ $REPLY == "4" ]; then
-                                    sudo apt upgrade -y
-                    elseif
-                            if [[ $REPLY == "5" ]; then
-                                    sudo apt upgrade -y
-                    else
-                            echo "Please select the option"
+                            if [[ $REPLY == "1" ]]; then
+                                sudo apt upgrade -y
+                        elif   [[ $REPLY == "2" ]]; then
+                                sudo apt upgrade -y
+                        elif   [[ $REPLY == "3" ]]; then
+                                sudo apt upgrade -y
+                        elif   [[ $REPLY == "4" ]]; then
+                                sudo apt upgrade -y
+                        elif   [[ $REPLY == "5" ]]; then
+                                sudo apt upgrade -y
+                        elif   [[ $REPLY == "6" ]]; then
+                                sudo apt upgrade -y
+                        elif   [[ $REPLY == "7" ]]; then
+                                exit
+                        else
+                                echo "Please select the option"
                     fi
                 
                 
@@ -68,8 +68,7 @@ selctinstall(){
 
 }
 
-
-
+selectinstall
 
 
 
