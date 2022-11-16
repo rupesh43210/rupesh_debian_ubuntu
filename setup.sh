@@ -19,7 +19,7 @@
 
 # do a upgrade
 
-    echo " do you want to run upgrade(Recommended) -Note this can't be undone (Y/n)"
+    echo " Do you want to run upgrade(Recommended) - Note- this can't be interrupted (Y/n)"
     read upgrade
 
         if [[ $upgrade == "Y" || $input == "y" ]]; then
