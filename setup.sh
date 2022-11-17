@@ -80,6 +80,12 @@ selectinstall(){
                                 ./lempinstall.sh
                                 chmod +x wordpress_part1.sh
                                 ./wordpress_part1.sh
+                                chmod +x wordpress part2 mysql.sh
+                                ./wordpress part2 mysql.sh
+                                chmod +x wordpresspart3.sh
+                                ./wordpresspart3.sh
+                                cd ../
+                                echo "Wordpress has been successfully installed"
 
 
                         elif   [[ $REPLY == "6" ]]; then
