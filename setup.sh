@@ -42,8 +42,8 @@ selectinstall(){
                 
                          if [[ $REPLY == "1" ]]; then
                                 
-                                git clone https://github.com/rupesh43210/splunk_server.git
-                                cd dvwa-deploy-on-host
+                                git clone https://github.com/rupesh43210/dvwa-deploy-on-host.git
+                                cd ~/dvwa-deploy-on-host
                                 sudo chmod +x dvwa.sh
                                 sudo ./dvwa.sh
                                 cd ~/
@@ -54,7 +54,7 @@ selectinstall(){
                                 
 
                         elif   [[ $REPLY == "2" ]]; then                                
-                                git clone https://github.com/rupesh43210/dvwa-deploy-on-host.git
+                                https://github.com/rupesh43210/splunk_server.git
                                 cd ~/splunk_server
                                 sudo chmod +x splunk_server.sh
                                 sudo ./splunk_server.sh
