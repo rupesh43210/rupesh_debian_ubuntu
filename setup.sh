@@ -81,8 +81,8 @@ selectinstall(){
                                 ./lemp_install.sh
                                 chmod +x wordpress_part1.sh
                                 ./wordpress_part1.sh
-                                chmod +x wordpress part2 mysql.sh
-                                ./wordpress part2 mysql.sh
+                                chmod +x wordpress_part2_ mysql.sh
+                                ./wordpress_part2_ mysql.sh
                                 chmod +x wordpresspart3.sh
                                 ./wordpresspart3.sh
                                 cd ../
