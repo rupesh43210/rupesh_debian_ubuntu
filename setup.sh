@@ -62,7 +62,12 @@ selectinstall(){
                                 echo "splunk server has been successfully installed"
 
                         elif   [[ $REPLY == "3" ]]; then
-                                sudo apt upgrade -y
+                                git clone https://github.com/rupesh43210/splunk_forwarder_install_x86_64.git
+                                cd ~/splunk_forwarder_install_x86_64
+                                chmod +x splunk_fowd_install.sh
+                                sudo ./splunk_fowd_install.sh
+                                cd ../
+                                echo "Splunk forwarder has been installed ad configured successfully"
 
 
                         elif   [[ $REPLY == "4" ]]; then
