@@ -51,9 +51,8 @@ selectinstall(){
                                 echo "splunk server has been successfully installed"
 
                         elif   [[ $REPLY == "2" ]]; then                                
-                                cd ~
                                 git clone https://github.com/rupesh43210/splunk_server.git
-                                cd ~/dvwa-deploy-on-host
+                                cd dvwa-deploy-on-host
                                 sudo chmod +x dvwa.sh
                                 sudo ./dvwa.sh
                                 cd ~/
