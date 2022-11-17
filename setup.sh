@@ -77,8 +77,8 @@ selectinstall(){
                                 cd ~ || exit
                                 git clone https://github.com/rupesh43210/wordpress-nginx.git
                                 cd ~/wordpress-nginx || exit
-                                chmod +x lempinstall.sh
-                                ./lempinstall.sh
+                                chmod +x lemp_install.sh
+                                ./lemp_install.sh
                                 chmod +x wordpress_part1.sh
                                 ./wordpress_part1.sh
                                 chmod +x wordpress part2 mysql.sh
