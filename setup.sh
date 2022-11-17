@@ -42,15 +42,6 @@ selectinstall(){
                 
                          if [[ $REPLY == "1" ]]; then
                                 
-
-                                git clone https://github.com/rupesh43210/dvwa-deploy-on-host.git
-                                cd ~/splunk_server
-                                sudo chmod +x splunk_server.sh
-                                sudo ./splunk_server.sh
-                                cd ../
-                                echo "splunk server has been successfully installed"
-
-                        elif   [[ $REPLY == "2" ]]; then                                
                                 git clone https://github.com/rupesh43210/splunk_server.git
                                 cd dvwa-deploy-on-host
                                 sudo chmod +x dvwa.sh
@@ -58,6 +49,17 @@ selectinstall(){
                                 cd ~/
                                 echo "DVWA app has been successfully installed using mariadb and apache webserver"
 
+
+
+                                
+
+                        elif   [[ $REPLY == "2" ]]; then                                
+                                git clone https://github.com/rupesh43210/dvwa-deploy-on-host.git
+                                cd ~/splunk_server
+                                sudo chmod +x splunk_server.sh
+                                sudo ./splunk_server.sh
+                                cd ../
+                                echo "splunk server has been successfully installed"
 
                         elif   [[ $REPLY == "3" ]]; then
                                 sudo apt upgrade -y
