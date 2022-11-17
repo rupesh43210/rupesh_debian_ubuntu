@@ -26,92 +26,69 @@
         fi
 
 
-
-
-
 #give options to install
 
 selectinstall(){
     
                 echo " Choose from the below options for installation"
+
+                 cd ~
     
                select feature in dvwa-app splunk-server splunk-forwarder mariadb-server wordpress-nginx docker-dockercompose "exit"
+
             do
                 echo "You have opted : $Reply $feature"
                 #echo "Selected number: $REPLY"
                 
-                            if [[ $REPLY == "1" ]]; then
-                                sudo apt upgrade -y
-                        elif   [[ $REPLY == "2" ]]; then
-                                sudo apt upgrade -y
+                         if [[ $REPLY == "1" ]]; then
+                                
+
+                                git clone https://github.com/rupesh43210/dvwa-deploy-on-host.git
+                                cd ~/splunk_server
+                                sudo chmod +x splunk_server.sh
+                                sudo ./splunk_server.sh
+                                cd ../
+                                echo "splunk server has been successfully installed"
+
+                        elif   [[ $REPLY == "2" ]]; then                                
+                                cd ~
+                                git clone https://github.com/rupesh43210/splunk_server.git
+                                cd ~/dvwa-deploy-on-host
+                                sudo chmod +x dvwa.sh
+                                sudo ./dvwa.sh
+                                cd ~/
+                                echo "DVWA app has been successfully installed using mariadb and apache webserver"
+
+
                         elif   [[ $REPLY == "3" ]]; then
                                 sudo apt upgrade -y
+
+
                         elif   [[ $REPLY == "4" ]]; then
                                 sudo apt upgrade -y
+                                
+
                         elif   [[ $REPLY == "5" ]]; then
                                 sudo apt upgrade -y
+
+
                         elif   [[ $REPLY == "6" ]]; then
                                 sudo apt upgrade -y
+
+
                         elif   [[ $REPLY == "7" ]]; then
                                 exit
                         else
-                                echo "Please select the option"
+                                echo "Not a valid entry"
                     fi
-                
-                
-                
-                
-            done
-
-
-
+                         
+         done
+   
 
 }
 
-selectinstall
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-dvwa
-
-splunk forwarder
-
-splunk server
-
-mariadb
-
-wordpress_nginx
-
-docker and docker compose
-
-  portainer
-  bwapp_docker
-  sql docker
-  wordpress_docker_apache
-  
-#based on options set varibles if required
-
-#execute scripts
-
-#set a welcome and completion message
+if [[ -z ${REPLY} ]]; then
+        selectinstall
+else
+        echo "variable is already set"
+fi
