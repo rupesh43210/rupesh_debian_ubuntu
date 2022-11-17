@@ -54,7 +54,7 @@ selectinstall(){
                                 
 
                         elif   [[ $REPLY == "2" ]]; then                                
-                                https://github.com/rupesh43210/splunk_server.git
+                                git clone https://github.com/rupesh43210/splunk_server.git
                                 cd ~/splunk_server
                                 sudo chmod +x splunk_server.sh
                                 sudo ./splunk_server.sh
