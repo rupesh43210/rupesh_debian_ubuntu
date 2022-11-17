@@ -83,7 +83,7 @@ selectinstall(){
                                 chmod +x wordpress_part1.sh
                                 sed -i -e 's/\r$//' wordpress_part1.sh
                                 ./wordpress_part1.sh
-                                chmod +x wordpress_part2_ mysql.sh
+                                chmod +x wordpress_part2_mysql.sh
                                 sed -i -e 's/\r$//' wordpress_part2_mysql.sh
                                 ./wordpress_part2_mysql.sh
                                 chmod +x wordpresspart3.sh
