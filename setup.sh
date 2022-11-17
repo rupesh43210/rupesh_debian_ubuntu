@@ -19,7 +19,7 @@
     echo " Do you want to run upgrade(Recommended) - Note- this can't be interrupted (Y/n)"
     read upgrade
 
-        if [[ $upgrade == "Y" || $input == "y" ]]; then
+        if [[ $upgrade == "Y" || $upgrade == "y" ]]; then
                 sudo apt upgrade -y
         else
                 echo "you can upgrade later with -  sudo apt upgrade"
@@ -36,21 +36,21 @@ selectinstall(){
                 select feature in dvwa-app splunk-server splunk-forwarder mariadb-server wordpress-nginx docker-dockercompose "exit"
 
             do
-                echo "You have opted : $Reply $feature"
+                echo "You have opted : $REPLY: $feature"
                 #echo "Selected number: $REPLY"
                 
                          if [[ $REPLY == "1" ]]; then
                                 
                                 git clone https://github.com/rupesh43210/dvwa-deploy-on-host.git
-                                cd ~/dvwa-deploy-on-host
+                                cd ~/dvwa-deploy-on-host || exit
                                 sudo chmod +x dvwa.sh
                                 sudo ./dvwa.sh
-                                cd ~/
+                                cd ~/ || exit
                                 echo "DVWA app has been successfully installed using mariadb and apache webserver"                                
 
                         elif   [[ $REPLY == "2" ]]; then                                
                                 git clone https://github.com/rupesh43210/splunk_server.git
-                                cd ~/splunk_server
+                                cd ~/splunk_server || exit
                                 sudo chmod +x splunk_server.sh
                                 sudo ./splunk_server.sh
                                 cd ../
@@ -58,7 +58,7 @@ selectinstall(){
 
                         elif   [[ $REPLY == "3" ]]; then
                                 git clone https://github.com/rupesh43210/splunk_forwarder_install_x86_64.git
-                                cd ~/splunk_forwarder_install_x86_64
+                                cd ~/splunk_forwarder_install_x86_64 || exit
                                 chmod +x splunk_fowd_install.sh
                                 sudo ./splunk_fowd_install.sh
                                 cd ../
