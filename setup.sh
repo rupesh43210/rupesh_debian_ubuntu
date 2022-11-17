@@ -74,7 +74,12 @@ selectinstall(){
                                 
 
                         elif   [[ $REPLY == "5" ]]; then
-                                sudo apt upgrade -y
+                                git clone https://github.com/rupesh43210/wordpress-nginx.git
+                                cd ~/wordpress-nginx || exit
+                                chmod +x lempinstall.sh
+                                ./lempinstall.sh
+                                chmod +x wordpress_part1.sh
+                                ./wordpress_part1.sh
 
 
                         elif   [[ $REPLY == "6" ]]; then
