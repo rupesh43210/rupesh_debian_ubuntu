@@ -33,7 +33,7 @@ selectinstall(){
                 echo " Choose from the below options for installation"
 
                  cd ~
-                select feature in dvwa-app splunk-server splunk-forwarder mariadb-server wordpress-nginx docker-dockercompose "exit"
+                select feature in dvwa-app splunk-server splunk-forwarder mariadb-server-client wordpress-nginx docker-dockercompose "exit"
 
             do
                 echo "You have opted : $REPLY: $feature"
@@ -66,7 +66,11 @@ selectinstall(){
 
 
                         elif   [[ $REPLY == "4" ]]; then
-                                sudo apt upgrade -y
+                                git clone https://github.com/rupesh43210/mariadb.git
+                                cd ~/mariadb || exit
+                                chmod +x mariadb.sh
+                                cd ../
+                                echo "mariadb has been successfully configured"
                                 
 
                         elif   [[ $REPLY == "5" ]]; then
