@@ -33,8 +33,7 @@ selectinstall(){
                 echo " Choose from the below options for installation"
 
                  cd ~
-    
-               select feature in dvwa-app splunk-server splunk-forwarder mariadb-server wordpress-nginx docker-dockercompose "exit"
+                select feature in dvwa-app splunk-server splunk-forwarder mariadb-server wordpress-nginx docker-dockercompose "exit"
 
             do
                 echo "You have opted : $Reply $feature"
@@ -47,11 +46,7 @@ selectinstall(){
                                 sudo chmod +x dvwa.sh
                                 sudo ./dvwa.sh
                                 cd ~/
-                                echo "DVWA app has been successfully installed using mariadb and apache webserver"
-
-
-
-                                
+                                echo "DVWA app has been successfully installed using mariadb and apache webserver"                                
 
                         elif   [[ $REPLY == "2" ]]; then                                
                                 git clone https://github.com/rupesh43210/splunk_server.git
