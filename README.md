@@ -1,6 +1,4 @@
-# rupesh_debian_ubuntu
-
-essentials AIO script to install in one go
+# rupesh_debian_ubuntu-essentials AIO script to install in one go
 
 
 # dvwa-app 
@@ -9,3 +7,11 @@ essentials AIO script to install in one go
 # mariadb-server-client
 # wordpress-nginx 
 # docker-dockercompose
+
+
+$ How to use this script
+sudo su
+gitclone https://github.com/rupesh43210/rupesh_debian_ubuntu.git
+cd rupesh_debian_ubuntu
+chmod +x setup.sh
+./setup.sh
