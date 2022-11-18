@@ -85,7 +85,14 @@ selectinstall(){
 
 
                         elif   [[ $REPLY == "6" ]]; then
-                                echo "Feature Coming Soon"
+                                cd ~/rupesh_debian_ubuntu || exit
+                                git clone https://github.com/rupesh43210/docker-install.git
+                                cd docker-install
+                                rm wordpressdocker.sh
+                                chmod +x dockersetup.sh
+                                cd ../
+                                echo "docker and docker-compose with portainer installed"
+                                
 
 
                         elif   [[ $REPLY == "7" ]]; then
