@@ -75,7 +75,7 @@ selectinstall(){
 
                         elif   [[ $REPLY == "5" ]]; then
                                 cd ~ || exit
-                                https://github.com/rupesh43210/wordpress_host_install.git
+                                git clone https://github.com/rupesh43210/wordpress_host_install.git
                                 cd ~/wordpress_host_install
                                 chmod +x 1_lemp_install.sh
                                 ./1_lemp_install.sh
@@ -84,7 +84,7 @@ selectinstall(){
 
 
                         elif   [[ $REPLY == "6" ]]; then
-                                sudo apt upgrade -y
+                                echo "Feature Coming Soon"
 
 
                         elif   [[ $REPLY == "7" ]]; then
