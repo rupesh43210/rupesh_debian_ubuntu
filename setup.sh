@@ -75,20 +75,10 @@ selectinstall(){
 
                         elif   [[ $REPLY == "5" ]]; then
                                 cd ~ || exit
-                                git clone https://github.com/rupesh43210/wordpress-nginx.git
-                                cd ~/wordpress-nginx || exit
-                                chmod +x lemp_install.sh
-                                sed -i -e 's/\r$//' lemp_install.sh
-                                ./lemp_install.sh
-                                chmod +x wordpress_part1.sh
-                                sed -i -e 's/\r$//' wordpress_part1.sh
-                                ./wordpress_part1.sh
-                                chmod +x wordpress_part2_mysql.sh
-                                sed -i -e 's/\r$//' wordpress_part2_mysql.sh
-                                ./wordpress_part2_mysql.sh
-                                chmod +x wordpresspart3.sh
-                                sed -i -e 's/\r$//' wordpresspart3.sh
-                                ./wordpresspart3.sh
+                                https://github.com/rupesh43210/wordpress_host_install.git
+                                cd ~/wordpress_host_install
+                                chmod +x 1_lemp_install.sh
+                                ./1_lemp_install.sh
                                 cd ../
                                 echo "Wordpress has been successfully installed"
 
