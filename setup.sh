@@ -81,6 +81,7 @@ selectinstall(){
                                 ./1_lemp_install.sh
                                 cd ../
                                 echo "Wordpress has been successfully installed"
+                                
 
 
                         elif   [[ $REPLY == "6" ]]; then
@@ -88,7 +89,10 @@ selectinstall(){
 
 
                         elif   [[ $REPLY == "7" ]]; then
+                                cd ~ || exit
+                                rm -r rup*/
                                 exit
+                                
                         else
                                 echo "Not a valid entry"
                     fi
