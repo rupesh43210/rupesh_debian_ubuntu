@@ -4,7 +4,9 @@ source ./aiofunctions.sh
 
 # set up welcome message
 
-    echo "welcome to AIO debian_ubutu_setup"
+pwd=gitclean
+
+echo "welcome to AIO debian_ubutu_setup"
 
 #check if a user is root
 checksudo
@@ -29,8 +31,8 @@ checksudo
 selectinstall(){
     
                 echo " Choose from the below options for installation"
-
-                 cd ~
+                
+                cd ~
                 select feature in dvwa-app splunk-server splunk-forwarder mariadb-server-client wordpress-nginx docker-dockercompose "exit"
 
             do
@@ -94,7 +96,7 @@ selectinstall(){
 
 
                         elif   [[ $REPLY == "7" ]]; then
-                                #cd ~ || exit
+                                cd $pwd || exit
                                 cd ../
                                 rm -r rup*
                                 break
