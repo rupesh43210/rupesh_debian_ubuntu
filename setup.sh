@@ -20,11 +20,9 @@ checksudo
 # do a upgrade
     echo " Do you want to run upgrade(Recommended) - Note- this can't be interrupted (Y/n)"
     read upgrade
-
         if [[ $upgrade == "Y" || $upgrade == "y" ]]; then
                 sudo apt upgrade -y
-        else
-                echo "you can upgrade later with -  sudo apt upgrade"
+        else    echo "you can upgrade later with -  sudo apt upgrade"
         fi
 
 
