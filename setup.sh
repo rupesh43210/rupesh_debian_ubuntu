@@ -4,7 +4,7 @@ source ./aiofunctions.sh
 
 # set up welcome message
 
-pwd=gitclean
+gitclean=pwd
 
 echo "welcome to AIO debian_ubutu_setup"
 
