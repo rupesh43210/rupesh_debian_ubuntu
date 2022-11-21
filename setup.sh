@@ -30,19 +30,16 @@ checksudo
 
 #give options to install
 
-selectinstall(){
-    
-                echo " Choose from the below options for installation"
-                
+selectinstall(){    
+                echo " Choose from the below options for installation"                
                 cd ~
+                
                 select feature in dvwa-app splunk-server splunk-forwarder mariadb-server-client wordpress-nginx docker-dockercompose "exit"
-
             do
                 echo "You have opted : $REPLY: $feature"
                 #echo "Selected number: $REPLY"
                 
-                         if [[ $REPLY == "1" ]]; then
-                                
+                         if [[ $REPLY == "1" ]]; then                                
                                 git clone https://github.com/rupesh43210/dvwa-deploy-on-host.git
                                 cd ~/dvwa-deploy-on-host || exit
                                 sudo chmod +x dvwa.sh
@@ -72,8 +69,7 @@ selectinstall(){
                                 cd ~/mariadb || exit
                                 chmod +x mariadb.sh
                                 cd ../
-                                echo "mariadb has been successfully configured"
-                                
+                                echo "mariadb has been successfully configured"                                
 
                         elif   [[ $REPLY == "5" ]]; then
                                 cd ~ || exit
@@ -82,9 +78,7 @@ selectinstall(){
                                 chmod +x 1_lemp_install.sh
                                 ./1_lemp_install.sh
                                 cd ../
-                                echo "Wordpress has been successfully installed"
-                                
-
+                                echo "Wordpress has been successfully installed"                              
 
                         elif   [[ $REPLY == "6" ]]; then
                                 cd ~/rupesh_debian_ubuntu || exit
@@ -95,10 +89,7 @@ selectinstall(){
                                 cd ../
                                 echo "docker and docker-compose with portainer installed"
                                 
-
-
-                        elif   [[ $REPLY == "7" ]]; then
-                        
+                        elif   [[ $REPLY == "7" ]]; then                        
                                 echo "cleaning up"
                                 cd $gitclean || exit
                                 #ls
@@ -107,8 +98,7 @@ selectinstall(){
                                 rm -r rup*/
                                 break
                                 
-                        else
-                                echo "Not a valid entry"
+                        else  echo "Not a valid entry"
                     fi
                          
          done
@@ -117,9 +107,8 @@ selectinstall(){
 }
 
 if [[ -z ${REPLY} ]]; then
-        selectinstall
-else
-        echo "variable is already set"
+           selectinstall
+    else   echo "variable is already set"
 fi
 
 
