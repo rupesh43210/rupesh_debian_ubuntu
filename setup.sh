@@ -96,7 +96,7 @@ selectinstall(){
                         elif   [[ $REPLY == "7" ]]; then
                                 cd ~ || exit
                                 rm -r rup*/
-                                exit
+                                break
                                 
                         else
                                 echo "Not a valid entry"
