@@ -11,7 +11,6 @@ checksudo(){
 
 
 #give options to install
-
 selectinstall(){    
                 echo " Choose from the below options for installation"                
                 cd ~
@@ -83,7 +82,6 @@ selectinstall(){
                         else  echo "Not a valid entry"
                     fi
                          
-         done
-   
+         done  
 
 }
