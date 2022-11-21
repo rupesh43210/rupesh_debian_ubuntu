@@ -96,10 +96,12 @@ selectinstall(){
 
 
                         elif   [[ $REPLY == "7" ]]; then
+                        
+                                echo "cleaning up"
                                 cd $gitclean || exit
-                                ls
+                                #ls
                                 cd ../
-                                ls
+                                #ls
                                 rm -r rup*/
                                 break
                                 
