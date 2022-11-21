@@ -5,8 +5,10 @@ source ./aiofunctions.sh
 # set up welcome message
 
 gitclean=$(pwd)
+arch=$(uname -m)
 
 echo "welcome to AIO debian_ubutu_setup"
+echo your system architecture $arch
 
 #check if a user is root
 checksudo
