@@ -100,7 +100,7 @@ selectinstall(){
                                 ls
                                 cd ../
                                 ls
-                                rm -r /rup*
+                                rm -r rup*/
                                 break
                                 
                         else
