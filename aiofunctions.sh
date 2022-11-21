@@ -67,6 +67,7 @@ selectinstall(){
                                 cd docker-install
                                 rm wordpressdocker.sh
                                 chmod +x dockersetup.sh
+                                ./dockersetup.sh
                                 cd ../
                                 echo "docker and docker-compose with portainer installed"
                                 
