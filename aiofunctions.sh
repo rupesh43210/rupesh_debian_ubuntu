@@ -15,7 +15,7 @@ selectinstall(){
                 echo " Choose from the below options for installation"                
                 cd ~
                 
-                select feature in dvwa-app splunk-server splunk-forwarder mariadb-server-client wordpress-nginx docker-dockercompose "exit"
+                select feature in dvwa-app splunk-server splunk-forwarder mariadb-server-client wordpress-nginx docker-dockercompose snort "exit"
             do
                 echo "You have opted : $REPLY: $feature"
                 #echo "Selected number: $REPLY"
@@ -70,7 +70,10 @@ selectinstall(){
                                 cd ../
                                 echo "docker and docker-compose with portainer installed"
                                 
-                        elif   [[ $REPLY == "7" ]]; then                        
+                        elif   [[ $REPLY == "7" ]]; then
+                                sudo apt-get install snort
+                                
+                        elif   [[ $REPLY == "8" ]]; then                        
                                 echo "cleaning up"
                                 cd $gitclean || exit
                                 #ls
