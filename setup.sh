@@ -96,7 +96,9 @@ selectinstall(){
 
 
                         elif   [[ $REPLY == "7" ]]; then
-                                cd ../../$gitclean || exit
+                                cd $gitclean || exit
+                                ls
+                                cd ../
                                 ls
                                 rm -r /rup*
                                 break
