@@ -1,16 +1,14 @@
 #!/bin/bash
 
+source ./aiofunctions.sh
+
 # set up welcome message
 
     echo "welcome to AIO debian_ubutu_setup"
 
 #check if a user is root
-
-    if [[ $EUID -ne 0 ]]; then
-       echo "This script must be run as root" 
-       echo " You need to run this script as root - run the command sudo su"
-       exit 1
-    fi
+checksudo
+    
 
 #do a update 
     sudo apt update
