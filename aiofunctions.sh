@@ -62,7 +62,7 @@ selectinstall(){
                                 echo "Wordpress has been successfully installed"                              
 
                         elif   [[ $REPLY == "6" ]]; then
-                                cd ~/rupesh_debian_ubuntu || exit
+                                #cd ~/rupesh_debian_ubuntu || exit
                                 git clone https://github.com/rupesh43210/docker-install.git
                                 cd docker-install
                                 rm wordpressdocker.sh
