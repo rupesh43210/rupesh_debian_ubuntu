@@ -94,7 +94,7 @@ selectinstall(){
 
 
                         elif   [[ $REPLY == "7" ]]; then
-                                cd ~ || exit
+                                #cd ~ || exit
                                 cd ../
                                 rm -r rup*
                                 break
