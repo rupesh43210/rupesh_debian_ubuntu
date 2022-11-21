@@ -114,4 +114,4 @@ else
 fi
 
 
-ech "thankyou and proceed"
+echo "thankyou and proceed"
