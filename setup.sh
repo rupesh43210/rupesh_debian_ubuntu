@@ -4,7 +4,7 @@ source ./aiofunctions.sh
 
 # set up welcome message
 
-gitclean=pwd
+gitclean=$(pwd)
 
 echo "welcome to AIO debian_ubutu_setup"
 
@@ -96,8 +96,8 @@ selectinstall(){
 
 
                         elif   [[ $REPLY == "7" ]]; then
-                                cd $pwd || exit
-                                cd ../
+                                cd ../$gitclean || exit
+                                ls
                                 rm -r rup*
                                 break
                                 
