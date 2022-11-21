@@ -114,4 +114,4 @@ else
 fi
 
 
-echo "thankyou and proceed"
+echo "Thankyou"
