@@ -71,7 +71,7 @@ selectinstall(){
                                 echo "docker and docker-compose with portainer installed"
                                 
                         elif   [[ $REPLY == "7" ]]; then
-                                sudo apt-get install snort
+                                sudo apt-get install -y snort
                                 
                         elif   [[ $REPLY == "8" ]]; then                        
                                 echo "cleaning up"
