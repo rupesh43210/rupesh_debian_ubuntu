@@ -3,7 +3,6 @@
 source ./aiofunctions.sh
 
 # set up welcome message
-
 gitclean=$(pwd)
 arch=$(uname -m)
 
