@@ -95,7 +95,7 @@ selectinstall(){
 
                         elif   [[ $REPLY == "7" ]]; then
                                 cd ~ || exit
-                                rm -r rup*/
+                                rm -r ~/rup*
                                 break
                                 
                         else
@@ -112,3 +112,6 @@ if [[ -z ${REPLY} ]]; then
 else
         echo "variable is already set"
 fi
+
+
+ech "thankyou and proceed"
