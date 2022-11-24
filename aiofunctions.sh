@@ -14,6 +14,8 @@ checksudo(){
 selectinstall(){    
                 echo " Choose from the below options for installation"                
                 cd ~
+                mkdir AIO_rupesh
+                cd AIO
                 
                 select feature in dvwa-app splunk-server splunk-forwarder mariadb-server-client wordpress-nginx docker-dockercompose snort "exit"
             do
@@ -80,7 +82,7 @@ selectinstall(){
                                 #ls
                                 cd ../
                                 #ls
-                                rm -r rup*/
+                                rm -r AIO/
                                 break
                                 
                         else  echo "Not a valid entry"
