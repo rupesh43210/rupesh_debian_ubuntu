@@ -14,10 +14,7 @@ checksudo(){
 selectinstall(){    
                 echo " Choose from the below options for installation"                
                 cd ~
-                mkdir AIO_rupesh
-                cd AIO_rupesh
-                location=$(pwd)
-                
+                               
                 select feature in dvwa-app splunk-server splunk-forwarder mariadb-server-client wordpress-nginx docker-dockercompose snort "exit"
             do
                 echo "You have opted : $REPLY: $feature"
@@ -25,7 +22,7 @@ selectinstall(){
                 
                          if [[ $REPLY == "1" ]]; then                                
                                 git clone https://github.com/rupesh43210/dvwa-deploy-on-host.git
-                                cd $(location)/dvwa-deploy-on-host || exit
+                                cd ~/dvwa-deploy-on-host || exit
                                 sudo chmod +x dvwa.sh
                                 sudo ./dvwa.sh
                                 cd ~/ || exit
@@ -33,7 +30,7 @@ selectinstall(){
 
                         elif   [[ $REPLY == "2" ]]; then                                
                                 git clone https://github.com/rupesh43210/splunk_server.git
-                                cd $(location)/splunk_server || exit
+                                cd ~/splunk_server || exit
                                 sudo chmod +x splunk_server.sh
                                 sudo ./splunk_server.sh
                                 cd ../
@@ -41,7 +38,7 @@ selectinstall(){
 
                         elif   [[ $REPLY == "3" ]]; then
                                 git clone https://github.com/rupesh43210/splunk_forwarder_install_x86_64.git
-                                cd $(location)/splunk_forwarder_install_x86_64 || exit
+                                cd ~/splunk_forwarder_install_x86_64 || exit
                                 chmod +x splunk_fowd_install.sh
                                 sudo ./splunk_fowd_install.sh
                                 cd ../
@@ -50,7 +47,7 @@ selectinstall(){
 
                         elif   [[ $REPLY == "4" ]]; then
                                 git clone https://github.com/rupesh43210/mariadb.git
-                                cd $(location)/mariadb || exit
+                                cd ~/mariadb || exit
                                 chmod +x mariadb.sh
                                 cd ../
                                 echo "mariadb has been successfully configured"                                
@@ -58,7 +55,7 @@ selectinstall(){
                         elif   [[ $REPLY == "5" ]]; then
                                 cd ~ || exit
                                 git clone https://github.com/rupesh43210/wordpress_host_install.git
-                                cd $(location)/wordpress_host_install
+                                cd ~/wordpress_host_install
                                 chmod +x 1_lemp_install.sh
                                 ./1_lemp_install.sh
                                 cd ../
@@ -81,9 +78,9 @@ selectinstall(){
                                 echo "cleaning up"
                                 cd $gitclean || exit
                                 #ls
-                                cd ../$(location)
+                                cd ../
                                 #ls
-                                rm -r AIO_rupesh/
+                                rm -r rup*/
                                 break
                                 
                         else  echo "Not a valid entry"
