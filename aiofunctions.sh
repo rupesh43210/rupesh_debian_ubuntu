@@ -15,7 +15,7 @@ selectinstall(){
                 echo " Choose from the below options for installation"                
                 cd ~
                 mkdir AIO_rupesh
-                cd AIO
+                cd AIO_rupesh
                 location=$(pwd)
                 
                 select feature in dvwa-app splunk-server splunk-forwarder mariadb-server-client wordpress-nginx docker-dockercompose snort "exit"
@@ -83,7 +83,7 @@ selectinstall(){
                                 #ls
                                 cd ../$(location)
                                 #ls
-                                rm -r AIO/
+                                rm -r AIO_rupesh/
                                 break
                                 
                         else  echo "Not a valid entry"
