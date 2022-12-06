@@ -1,0 +1,5 @@
+#!/bin/bash
+
+read -p "Enter fully qualified domain name of your website  " fqdn
+
+certbot -d $fqdn --manual --preferred-challenges dns certonly
