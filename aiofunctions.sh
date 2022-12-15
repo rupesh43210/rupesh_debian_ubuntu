@@ -15,7 +15,7 @@ selectinstall(){
                 echo " Choose from the below options for installation"                
                 cd ~
                                
-                select feature in dvwa-app splunk-server splunk-forwarder mariadb-server-client wordpress-nginx docker-dockercompose snort "exit"
+                select feature in dvwa-app splunk-server splunk-forwarder mariadb-server-client wordpress-nginx docker-dockercompose snort zerotier "exit"
             do
                 echo "You have opted : $REPLY: $feature"
                 #echo "Selected number: $REPLY"
@@ -72,9 +72,12 @@ selectinstall(){
                                 echo "docker and docker-compose with portainer installed"
                                 
                         elif   [[ $REPLY == "7" ]]; then
-                                sudo apt-get install -y snort
+                                sudo apt-get install -y snort                                
                                 
-                        elif   [[ $REPLY == "8" ]]; then                        
+                        elif    [[ $REPLY == "8" ]]; then
+                                curl -s https://install.zerotier.com | sudo bash
+                                
+                        elif   [[ $REPLY == "9" ]]; then                        
                                 echo "cleaning up"
                                 cd $gitclean || exit
                                 #ls
@@ -82,6 +85,8 @@ selectinstall(){
                                 #ls
                                 rm -r rup*/
                                 break
+                                
+                        
                                 
                         else  echo "Not a valid entry"
                     fi
